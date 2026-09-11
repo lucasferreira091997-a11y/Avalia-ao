@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de Experiência</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>Avalie a experiência</h2>
+    <p class="subtitle">Como você avalia essa experiência</p>
+
+    <!-- Substitua a URL abaixo pela URL do seu formulário no Formspree -->
+    <form id="feedbackForm" action="https://formspree.io/f/mwlkzkor" method="POST">
+      
+      <!-- Campos de identificação -->
+      <div class="input-group">
+        <label for="name">Seu Nome</label>
+        <input type="text" id="name" name="Nome" placeholder="Digite seu nome" required>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Seu E-mail</label>
+        <input type="email" id="email" name="Email" placeholder="Digite seu e-mail" required>
+      </div>
+
+      <!-- Seleção de Nota -->
+      <div class="rating-container">
+        <label class="rating-option">
+          <input type="radio" name="Avaliacao" value="Muito ruim" required>
+          <span class="emoji">😡</span>
+          <span class="label">Muito ruim</span>
+        </label>
+
+        <label class="rating-option">
+          <input type="radio" name="Avaliacao" value="Ruim">
+          <span class="emoji">😢</span>
+          <span class="label">Ruim</span>
+        </label>
+
+        <label class="rating-option">
+          <input type="radio" name="Avaliacao" value="Regular">
+          <span class="emoji">😐</span>
+          <span class="label">Regular</span>
+        </label>
+
+        <label class="rating-option">
+          <input type="radio" name="Avaliacao" value="Bom">
+          <span class="emoji">🙂</span>
+          <span class="label">Bom</span>
+        </label>
+
+        <label class="rating-option">
+          <input type="radio" name="Avaliacao" value="Muito bom">
+          <span class="emoji">😄</span>
+          <span class="label">Muito bom</span>
+        </label>
+      </div>
+
+      <!-- Comentário -->
+      <div class="comment-container">
+        <label for="comment">Quer fazer um comentário? (opcional)</label>
+        <textarea id="comment" name="Comentario" maxlength="140" placeholder=""></textarea>
+        <div class="char-count"><span id="counter">140</span> caracteres</div>
+      </div>
+
+      <button type="submit" id="submitBtn" class="btn">Enviar avaliação</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
